@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A6C6EB1786DA66B00EEB83 /* Pods_TFCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */; };
 		E0AA776528296222002E6068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776428296222002E6068 /* AppDelegate.swift */; };
 		E0AA776928296222002E6068 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776828296222002E6068 /* ContentsViewController.swift */; };
 		E0AA776C28296222002E6068 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AA776A28296222002E6068 /* Contents.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F0A78FA2A07009A2D4BB384 /* Pods-TFCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFCase.debug.xcconfig"; path = "Target Support Files/Pods-TFCase/Pods-TFCase.debug.xcconfig"; sourceTree = "<group>"; };
+		8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFCase.release.xcconfig"; path = "Target Support Files/Pods-TFCase/Pods-TFCase.release.xcconfig"; sourceTree = "<group>"; };
+		AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AA776128296222002E6068 /* TFCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AA776428296222002E6068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0AA776828296222002E6068 /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
@@ -51,17 +55,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A6C6EB1786DA66B00EEB83 /* Pods_TFCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1EEF1804F78008476CDA26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81504764919D793C932DD9B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F0A78FA2A07009A2D4BB384 /* Pods-TFCase.debug.xcconfig */,
+				8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E0AA775828296221002E6068 = {
 			isa = PBXGroup;
 			children = (
 				E0AA776328296222002E6068 /* TFCase */,
 				E0AA776228296222002E6068 /* Products */,
+				81504764919D793C932DD9B4 /* Pods */,
+				3F1EEF1804F78008476CDA26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0AA777528296223002E6068 /* Build configuration list for PBXNativeTarget "TFCase" */;
 			buildPhases = (
+				D4C7F2D0DB4BC8ACBA34535D /* [CP] Check Pods Manifest.lock */,
 				E0AA775D28296221002E6068 /* Sources */,
 				E0AA775E28296221002E6068 /* Frameworks */,
 				E0AA775F28296221002E6068 /* Resources */,
+				D8C2FAB44E90E8F1BAD9B715 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +333,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4C7F2D0DB4BC8ACBA34535D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TFCase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C2FAB44E90E8F1BAD9B715 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TFCase/Pods-TFCase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TFCase/Pods-TFCase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TFCase/Pods-TFCase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0AA775D28296221002E6068 /* Sources */ = {
@@ -468,6 +537,7 @@
 		};
 		E0AA777628296223002E6068 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0A78FA2A07009A2D4BB384 /* Pods-TFCase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,6 +565,7 @@
 		};
 		E0AA777728296223002E6068 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
