@@ -10,5 +10,6 @@ import Foundation
 let app = AppContainer()
 
 final class AppContainer {
+    let service = TFService.shared
     let router = AppRouter()
 }

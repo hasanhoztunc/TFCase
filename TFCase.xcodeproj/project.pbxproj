@@ -24,6 +24,9 @@
 		E0AA77992829662A002E6068 /* TFViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77982829662A002E6068 /* TFViewModelDelegate.swift */; };
 		E0AA779C2829667F002E6068 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA779B2829667F002E6068 /* UIViewControllerExtensions.swift */; };
 		E0AA779F28296697002E6068 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA779E28296697002E6068 /* Storyboards.swift */; };
+		E0AA77A128296F21002E6068 /* ServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77A028296F21002E6068 /* ServiceConstants.swift */; };
+		E0AA77A428297224002E6068 /* TFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77A328297223002E6068 /* TFModel.swift */; };
+		E0AA77A728297270002E6068 /* TFServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77A628297270002E6068 /* TFServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		E0AA77982829662A002E6068 /* TFViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFViewModelDelegate.swift; sourceTree = "<group>"; };
 		E0AA779B2829667F002E6068 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		E0AA779E28296697002E6068 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		E0AA77A028296F21002E6068 /* ServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConstants.swift; sourceTree = "<group>"; };
+		E0AA77A328297223002E6068 /* TFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFModel.swift; sourceTree = "<group>"; };
+		E0AA77A628297270002E6068 /* TFServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +82,6 @@
 				6F0A78FA2A07009A2D4BB384 /* Pods-TFCase.debug.xcconfig */,
 				8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -170,7 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				E0AA779D2829668A002E6068 /* Constants */,
+				E0AA77A528297263002E6068 /* Enumerations */,
 				E0AA779A28296671002E6068 /* Extensions */,
+				E0AA77A228297217002E6068 /* Models */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -262,8 +269,25 @@
 			isa = PBXGroup;
 			children = (
 				E0AA779E28296697002E6068 /* Storyboards.swift */,
+				E0AA77A028296F21002E6068 /* ServiceConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		E0AA77A228297217002E6068 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77A328297223002E6068 /* TFModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0AA77A528297263002E6068 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77A628297270002E6068 /* TFServiceError.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +409,8 @@
 				E0AA776528296222002E6068 /* AppDelegate.swift in Sources */,
 				E0AA778D2829650D002E6068 /* AppRouter.swift in Sources */,
 				E0AA778B282964DF002E6068 /* ContentsViewModel.swift in Sources */,
+				E0AA77A728297270002E6068 /* TFServiceError.swift in Sources */,
+				E0AA77A428297224002E6068 /* TFModel.swift in Sources */,
 				E0AA779C2829667F002E6068 /* UIViewControllerExtensions.swift in Sources */,
 				E0AA7791282965A3002E6068 /* TFServiceRouter.swift in Sources */,
 				E0AA7796282965E8002E6068 /* ContentsViewModelDelegate.swift in Sources */,
@@ -394,6 +420,7 @@
 				E0AA77992829662A002E6068 /* TFViewModelDelegate.swift in Sources */,
 				E0AA778F28296513002E6068 /* AppContainer.swift in Sources */,
 				E0AA7793282965AC002E6068 /* TFService.swift in Sources */,
+				E0AA77A128296F21002E6068 /* ServiceConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
