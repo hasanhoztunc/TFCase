@@ -7,6 +7,7 @@
 
 import Foundation
 
-final class TFModel: Codable {
-    
+struct TFModel<TModel: Codable>: Codable {
+    let resultCount: Int
+    let results: TModel
 }

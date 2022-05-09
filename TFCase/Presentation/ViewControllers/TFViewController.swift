@@ -15,8 +15,20 @@ open class TFViewController<ViewModel: TFViewModel>: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.prepareUI()
+        
         if viewModel == nil {
             self.viewModel = ViewModel()
         }
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        self.viewModel.prepare()
+        
+        super.viewWillAppear(animated)
+    }
+    
+    func prepareUI() {
+        
     }
 }

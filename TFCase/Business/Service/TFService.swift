@@ -14,7 +14,7 @@ final class TFService {
     
     private init() {}
     
-    func execute<TModel: TFModel>(request: TFServiceRouter,
+    func execute<TModel: Codable>(request: TFServiceRouter,
                                   responseModel: TModel.Type,
                                   completion: @escaping (Result<TModel, TFServiceError>) -> Void) {
         do {
@@ -25,10 +25,10 @@ final class TFService {
                 case .success(let data):
                     do {
                         let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-                        let jsonModel = try JSONDecoder().decode(responseModel, from: jsonData)
-                        completion(.success(jsonModel))
+                        let jsonModel = try JSONDecoder().decode(TFModel<TModel>.self, from: jsonData)
+                        completion(.success(jsonModel.results))
                     } catch {
-                        
+                        completion(.failure(.parseError))
                     }
                 case .failure:
                     completion(.failure(.badRequestError))

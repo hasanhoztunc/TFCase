@@ -25,8 +25,13 @@
 		E0AA779C2829667F002E6068 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA779B2829667F002E6068 /* UIViewControllerExtensions.swift */; };
 		E0AA779F28296697002E6068 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA779E28296697002E6068 /* Storyboards.swift */; };
 		E0AA77A128296F21002E6068 /* ServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77A028296F21002E6068 /* ServiceConstants.swift */; };
-		E0AA77A428297224002E6068 /* TFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77A328297223002E6068 /* TFModel.swift */; };
 		E0AA77A728297270002E6068 /* TFServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77A628297270002E6068 /* TFServiceError.swift */; };
+		E0AA77AD282974F1002E6068 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77AC282974F1002E6068 /* Content.swift */; };
+		E0AA77AF2829772B002E6068 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77AE2829772B002E6068 /* ContentCollectionViewCell.swift */; };
+		E0AA77B12829776D002E6068 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0AA77B02829776D002E6068 /* ContentCollectionViewCell.xib */; };
+		E0AA77B3282977E2002E6068 /* ContentCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B2282977E2002E6068 /* ContentCollectionViewCellViewModel.swift */; };
+		E0AA77B7282979D8002E6068 /* TFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B6282979D8002E6068 /* TFModel.swift */; };
+		E0AA77BA28297C3A002E6068 /* ContentsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B928297C3A002E6068 /* ContentsConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +57,13 @@
 		E0AA779B2829667F002E6068 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		E0AA779E28296697002E6068 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		E0AA77A028296F21002E6068 /* ServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConstants.swift; sourceTree = "<group>"; };
-		E0AA77A328297223002E6068 /* TFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFModel.swift; sourceTree = "<group>"; };
 		E0AA77A628297270002E6068 /* TFServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFServiceError.swift; sourceTree = "<group>"; };
+		E0AA77AC282974F1002E6068 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		E0AA77AE2829772B002E6068 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0AA77B02829776D002E6068 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		E0AA77B2282977E2002E6068 /* ContentCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		E0AA77B6282979D8002E6068 /* TFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFModel.swift; sourceTree = "<group>"; };
+		E0AA77B928297C3A002E6068 /* ContentsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +158,7 @@
 			children = (
 				E0AA777D2829637D002E6068 /* Contents */,
 				E0AA777C2829636B002E6068 /* Launch */,
+				E0AA77AA282974DA002E6068 /* Shared */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -163,9 +174,11 @@
 		E0AA777D2829637D002E6068 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
+				E0AA77B828297C2A002E6068 /* Constants */,
 				E0AA7794282965C7002E6068 /* Protocols */,
-				E0AA7789282964D3002E6068 /* ViewModels */,
 				E0AA7788282964C8002E6068 /* ViewControllers */,
+				E0AA7789282964D3002E6068 /* ViewModels */,
+				E0AA77A8282973ED002E6068 /* Views */,
 				E0AA776A28296222002E6068 /* Contents.storyboard */,
 			);
 			path = Contents;
@@ -177,7 +190,7 @@
 				E0AA779D2829668A002E6068 /* Constants */,
 				E0AA77A528297263002E6068 /* Enumerations */,
 				E0AA779A28296671002E6068 /* Extensions */,
-				E0AA77A228297217002E6068 /* Models */,
+				E0AA77B5282979C9002E6068 /* Models */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -237,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				E0AA778A282964DF002E6068 /* ContentsViewModel.swift */,
+				E0AA77B2282977E2002E6068 /* ContentCollectionViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -274,20 +288,61 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		E0AA77A228297217002E6068 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E0AA77A328297223002E6068 /* TFModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		E0AA77A528297263002E6068 /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
 				E0AA77A628297270002E6068 /* TFServiceError.swift */,
 			);
 			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		E0AA77A8282973ED002E6068 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77A9282973F6002E6068 /* ContentCollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0AA77A9282973F6002E6068 /* ContentCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77AE2829772B002E6068 /* ContentCollectionViewCell.swift */,
+				E0AA77B02829776D002E6068 /* ContentCollectionViewCell.xib */,
+			);
+			path = ContentCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E0AA77AA282974DA002E6068 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77AB282974E5002E6068 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E0AA77AB282974E5002E6068 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77AC282974F1002E6068 /* Content.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0AA77B5282979C9002E6068 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77B6282979D8002E6068 /* TFModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0AA77B828297C2A002E6068 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77B928297C3A002E6068 /* ContentsConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AA77B12829776D002E6068 /* ContentCollectionViewCell.xib in Resources */,
 				E0AA777128296223002E6068 /* LaunchScreen.storyboard in Resources */,
 				E0AA776E28296223002E6068 /* Assets.xcassets in Resources */,
 				E0AA776C28296222002E6068 /* Contents.storyboard in Resources */,
@@ -406,11 +462,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0AA776928296222002E6068 /* ContentsViewController.swift in Sources */,
+				E0AA77BA28297C3A002E6068 /* ContentsConstants.swift in Sources */,
+				E0AA77AF2829772B002E6068 /* ContentCollectionViewCell.swift in Sources */,
 				E0AA776528296222002E6068 /* AppDelegate.swift in Sources */,
 				E0AA778D2829650D002E6068 /* AppRouter.swift in Sources */,
+				E0AA77B7282979D8002E6068 /* TFModel.swift in Sources */,
 				E0AA778B282964DF002E6068 /* ContentsViewModel.swift in Sources */,
 				E0AA77A728297270002E6068 /* TFServiceError.swift in Sources */,
-				E0AA77A428297224002E6068 /* TFModel.swift in Sources */,
 				E0AA779C2829667F002E6068 /* UIViewControllerExtensions.swift in Sources */,
 				E0AA7791282965A3002E6068 /* TFServiceRouter.swift in Sources */,
 				E0AA7796282965E8002E6068 /* ContentsViewModelDelegate.swift in Sources */,
@@ -420,7 +478,9 @@
 				E0AA77992829662A002E6068 /* TFViewModelDelegate.swift in Sources */,
 				E0AA778F28296513002E6068 /* AppContainer.swift in Sources */,
 				E0AA7793282965AC002E6068 /* TFService.swift in Sources */,
+				E0AA77AD282974F1002E6068 /* Content.swift in Sources */,
 				E0AA77A128296F21002E6068 /* ServiceConstants.swift in Sources */,
+				E0AA77B3282977E2002E6068 /* ContentCollectionViewCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
