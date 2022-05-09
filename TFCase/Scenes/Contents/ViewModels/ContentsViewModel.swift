@@ -10,6 +10,7 @@ import Foundation
 final class ContentsViewModel: TFViewModel {
     
     weak var delegate: ContentsViewModelDelegate?
+    private var contents: [Content] = []
     
     private var page = 0
     
@@ -19,6 +20,7 @@ final class ContentsViewModel: TFViewModel {
                             completion: { [weak self] response in
             switch response {
             case .success(let contents):
+                self?.contents = contents
                 let viewModels = contents.map({ ContentCollectionViewCellViewModel(contentName: $0.collectionName,
                                                                                   contentImage: $0.smallImage) })
                 self?.delegate?.contentsDidFetchSuccessfully(viewModels)
@@ -26,5 +28,10 @@ final class ContentsViewModel: TFViewModel {
                 print(error.localizedDescription)
             }
         })
+    }
+    
+    func contentDidSelect(with index: Int) {
+        let selectedContent = self.contents[index]
+        self.delegate?.navigateToDetail(with: selectedContent)
     }
 }

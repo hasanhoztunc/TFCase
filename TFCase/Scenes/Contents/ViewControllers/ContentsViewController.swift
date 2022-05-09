@@ -31,6 +31,16 @@ final class ContentsViewController: TFViewController<ContentsViewModel> {
                                              forCellWithReuseIdentifier: ContentsConstants.cellIdentifier)
         
         self.contentsCollectionView.dataSource = self
+        self.contentsCollectionView.delegate = self
+        
+        let itemSize = UIScreen.main.bounds.width / 2 - 3
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: itemSize, height: itemSize * 3/2)
+        layout.minimumInteritemSpacing = 3
+        layout.minimumLineSpacing = 3
+
+        self.contentsCollectionView.collectionViewLayout = layout
         
         self.searchTextField.addTarget(self, action: #selector(searchContent), for: .primaryActionTriggered)
     }
@@ -46,7 +56,7 @@ final class ContentsViewController: TFViewController<ContentsViewModel> {
 
 // MARK: - CollectionViewDataSource
 
-extension ContentsViewController: UICollectionViewDataSource {
+extension ContentsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.contents.count
@@ -58,6 +68,10 @@ extension ContentsViewController: UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.viewModel.contentDidSelect(with: indexPath.row)
+    }
 }
 
 // MARK: - ViewModelDelegate
@@ -67,5 +81,15 @@ extension ContentsViewController: ContentsViewModelDelegate {
     func contentsDidFetchSuccessfully(_ contents: [ContentCollectionViewCellViewModel]) {
         self.contents = contents
         self.contentsCollectionView.reloadData()
+    }
+    
+    func navigateToDetail(with data: Content) {
+        self.navigate(from: self, to: .contentDetail) { viewController in
+            let vc = viewController as! ContentDetailViewController
+            let viewModel = ContentDetailViewModel()
+            viewModel.content = data
+            
+            vc.viewModel = viewModel
+        }
     }
 }

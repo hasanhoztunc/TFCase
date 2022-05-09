@@ -7,6 +7,7 @@
 
 import Foundation
 
-enum Storyboards {
-    static let contents = "Contents"
+enum Storyboards: String {
+    case contents = "Contents"
+    case contentDetail = "ContentDetail"
 }

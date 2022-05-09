@@ -32,6 +32,10 @@
 		E0AA77B3282977E2002E6068 /* ContentCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B2282977E2002E6068 /* ContentCollectionViewCellViewModel.swift */; };
 		E0AA77B7282979D8002E6068 /* TFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B6282979D8002E6068 /* TFModel.swift */; };
 		E0AA77BA28297C3A002E6068 /* ContentsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B928297C3A002E6068 /* ContentsConstants.swift */; };
+		E0AA77C0282989DB002E6068 /* ContentDetailViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77BF282989DB002E6068 /* ContentDetailViewModelDelegate.swift */; };
+		E0AA77C2282989F5002E6068 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77C1282989F5002E6068 /* ContentDetailViewModel.swift */; };
+		E0AA77C428298A19002E6068 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77C328298A19002E6068 /* ContentDetailViewController.swift */; };
+		E0AA77C628298B32002E6068 /* ContentDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AA77C528298B32002E6068 /* ContentDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		E0AA77B2282977E2002E6068 /* ContentCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		E0AA77B6282979D8002E6068 /* TFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFModel.swift; sourceTree = "<group>"; };
 		E0AA77B928297C3A002E6068 /* ContentsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsConstants.swift; sourceTree = "<group>"; };
+		E0AA77BF282989DB002E6068 /* ContentDetailViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModelDelegate.swift; sourceTree = "<group>"; };
+		E0AA77C1282989F5002E6068 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
+		E0AA77C328298A19002E6068 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		E0AA77C528298B32002E6068 /* ContentDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				E0AA777D2829637D002E6068 /* Contents */,
+				E0AA77BB282989B5002E6068 /* ContentDetail */,
 				E0AA777C2829636B002E6068 /* Launch */,
 				E0AA77AA282974DA002E6068 /* Shared */,
 			);
@@ -345,6 +354,41 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		E0AA77BB282989B5002E6068 /* ContentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77BE282989CB002E6068 /* Protocols */,
+				E0AA77BD282989C2002E6068 /* ViewControllers */,
+				E0AA77BC282989BD002E6068 /* ViewModels */,
+				E0AA77C528298B32002E6068 /* ContentDetail.storyboard */,
+			);
+			path = ContentDetail;
+			sourceTree = "<group>";
+		};
+		E0AA77BC282989BD002E6068 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77C1282989F5002E6068 /* ContentDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E0AA77BD282989C2002E6068 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77C328298A19002E6068 /* ContentDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E0AA77BE282989CB002E6068 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77BF282989DB002E6068 /* ContentDetailViewModelDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -406,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0AA77B12829776D002E6068 /* ContentCollectionViewCell.xib in Resources */,
+				E0AA77C628298B32002E6068 /* ContentDetail.storyboard in Resources */,
 				E0AA777128296223002E6068 /* LaunchScreen.storyboard in Resources */,
 				E0AA776E28296223002E6068 /* Assets.xcassets in Resources */,
 				E0AA776C28296222002E6068 /* Contents.storyboard in Resources */,
@@ -472,11 +517,14 @@
 				E0AA779C2829667F002E6068 /* UIViewControllerExtensions.swift in Sources */,
 				E0AA7791282965A3002E6068 /* TFServiceRouter.swift in Sources */,
 				E0AA7796282965E8002E6068 /* ContentsViewModelDelegate.swift in Sources */,
+				E0AA77C428298A19002E6068 /* ContentDetailViewController.swift in Sources */,
 				E0AA778728296428002E6068 /* TFViewController.swift in Sources */,
 				E0AA778528296413002E6068 /* TFViewModel.swift in Sources */,
+				E0AA77C2282989F5002E6068 /* ContentDetailViewModel.swift in Sources */,
 				E0AA779F28296697002E6068 /* Storyboards.swift in Sources */,
 				E0AA77992829662A002E6068 /* TFViewModelDelegate.swift in Sources */,
 				E0AA778F28296513002E6068 /* AppContainer.swift in Sources */,
+				E0AA77C0282989DB002E6068 /* ContentDetailViewModelDelegate.swift in Sources */,
 				E0AA7793282965AC002E6068 /* TFService.swift in Sources */,
 				E0AA77AD282974F1002E6068 /* Content.swift in Sources */,
 				E0AA77A128296F21002E6068 /* ServiceConstants.swift in Sources */,

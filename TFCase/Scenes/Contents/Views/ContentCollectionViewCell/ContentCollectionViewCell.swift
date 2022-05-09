@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 final class ContentCollectionViewCell: UICollectionViewCell {
     
@@ -14,6 +15,7 @@ final class ContentCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var contentNameLabel: UILabel!
     
     func configureCell(with viewModel: ContentCollectionViewCellViewModel) {
+        self.contentImageView.kf.setImage(with: try? viewModel.contentImage.asURL())
         self.contentNameLabel.text = viewModel.contentName
     }
 }

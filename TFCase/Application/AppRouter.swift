@@ -17,7 +17,7 @@ final class AppRouter {
     }
     
     func startTheApp() {
-        let storyboard = UIStoryboard(name: Storyboards.contents, bundle: nil)
+        let storyboard = UIStoryboard(name: Storyboards.contents.rawValue, bundle: nil)
         let viewController = storyboard.instantiateInitialViewController()
         
         self.window.rootViewController = viewController
