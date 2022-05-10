@@ -22,15 +22,30 @@
                                     <constraint firstAttribute="width" secondItem="fI0-Ey-yCh" secondAttribute="height" multiplier="1:1" id="rlw-0F-b3Z"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAT-XQ-jLL">
+                                <rect key="frame" x="207" y="434" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="fI0-Ey-yCh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="67o-gL-uil"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fI0-Ey-yCh" secondAttribute="trailing" id="NL7-NN-5bY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fAT-XQ-jLL" secondAttribute="trailing" constant="20" id="eWH-GE-0I7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fAT-XQ-jLL" secondAttribute="bottom" constant="20" id="k2Y-f6-Dfr"/>
+                            <constraint firstItem="fAT-XQ-jLL" firstAttribute="top" secondItem="fI0-Ey-yCh" secondAttribute="bottom" constant="20" id="lUb-8D-GV0"/>
                             <constraint firstItem="fI0-Ey-yCh" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="sqe-Mh-rRm"/>
+                            <constraint firstItem="fAT-XQ-jLL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="wBb-CJ-qPa"/>
+                            <constraint firstItem="fAT-XQ-jLL" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="yRx-rV-rK3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="fI0-Ey-yCh" id="WtJ-QJ-Se7"/>
+                        <outlet property="contentNameLabel" destination="fAT-XQ-jLL" id="TkN-sj-XDb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,7 @@ final class ContentsViewController: TFViewController<ContentsViewModel> {
     // MARK: - Privates
     
     private var contents: [ContentCollectionViewCellViewModel] = []
+    private var isPageStillRefreshing: Bool = false
     
     // MARK: - Lifecycle
     
@@ -50,7 +51,7 @@ final class ContentsViewController: TFViewController<ContentsViewModel> {
             return
         }
         self.searchTextField.resignFirstResponder()
-        self.viewModel.search(text: self.searchTextField.text ?? "")
+        self.viewModel.searchContent(with: self.searchTextField.text ?? "")
     }
 }
 
@@ -72,6 +73,15 @@ extension ContentsViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.viewModel.contentDidSelect(with: indexPath.row)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (self.contentsCollectionView.contentOffset.y >= (self.contentsCollectionView.contentSize.height - self.contentsCollectionView.bounds.size.height)) {
+            if !self.isPageStillRefreshing {
+                self.viewModel.loadMoreContent()
+                self.isPageStillRefreshing.toggle()
+            }
+        }
+    }
 }
 
 // MARK: - ViewModelDelegate
@@ -81,6 +91,7 @@ extension ContentsViewController: ContentsViewModelDelegate {
     func contentsDidFetchSuccessfully(_ contents: [ContentCollectionViewCellViewModel]) {
         self.contents = contents
         self.contentsCollectionView.reloadData()
+        self.isPageStillRefreshing = false
     }
     
     func navigateToDetail(with data: Content) {

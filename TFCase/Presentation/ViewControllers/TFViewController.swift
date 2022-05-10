@@ -12,6 +12,8 @@ open class TFViewController<ViewModel: TFViewModel>: UIViewController {
     
     var viewModel: ViewModel!
     
+    private var indicator: UIActivityIndicatorView?
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,5 +32,24 @@ open class TFViewController<ViewModel: TFViewModel>: UIViewController {
     
     func prepareUI() {
         
+    }
+}
+
+extension TFViewController: TFControllerProtocol {
+    
+    func showIndicator() {
+        self.indicator = UIActivityIndicatorView(style: .gray)
+        self.indicator?.frame.origin = CGPoint(x: self.view.frame.size.width / 2, y: self.view.frame.height / 2)
+        if let indicator = indicator {
+            self.view.addSubview(indicator)
+            self.view.bringSubviewToFront(indicator)
+        }
+        self.indicator?.startAnimating()
+    }
+    
+    func hideIndicator() {
+        self.indicator?.stopAnimating()
+        self.indicator?.removeFromSuperview()
+        self.indicator = nil
     }
 }

@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import UIKit
+import Kingfisher
 
 final class ContentDetailViewController: TFViewController<ContentDetailViewModel> {
+    
+    @IBOutlet private weak var contentImageView: UIImageView!
+    @IBOutlet private weak var contentNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,4 +23,8 @@ final class ContentDetailViewController: TFViewController<ContentDetailViewModel
 
 extension ContentDetailViewController: ContentDetailViewModelDelegate {
     
+    func updateView(with content: Content) {
+        self.contentImageView.kf.setImage(with: try? content.bigImage.asURL())
+        self.contentNameLabel.text = content.collectionName
+    }
 }

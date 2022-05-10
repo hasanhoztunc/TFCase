@@ -11,4 +11,10 @@ final class ContentDetailViewModel: TFViewModel {
     
     weak var delegate: ContentDetailViewModelDelegate?
     var content: Content?
+    
+    override func prepare() {
+        if let content = content {
+            self.delegate?.updateView(with: content)
+        }
+    }
 }

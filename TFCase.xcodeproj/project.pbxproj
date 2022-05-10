@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18A6C6EB1786DA66B00EEB83 /* Pods_TFCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */; };
+		E08E21E8282A41D400FD4EDF /* TFControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08E21E7282A41D400FD4EDF /* TFControllerProtocol.swift */; };
 		E0AA776528296222002E6068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776428296222002E6068 /* AppDelegate.swift */; };
 		E0AA776928296222002E6068 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776828296222002E6068 /* ContentsViewController.swift */; };
 		E0AA776C28296222002E6068 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AA776A28296222002E6068 /* Contents.storyboard */; };
@@ -42,6 +43,7 @@
 		6F0A78FA2A07009A2D4BB384 /* Pods-TFCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFCase.debug.xcconfig"; path = "Target Support Files/Pods-TFCase/Pods-TFCase.debug.xcconfig"; sourceTree = "<group>"; };
 		8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFCase.release.xcconfig"; path = "Target Support Files/Pods-TFCase/Pods-TFCase.release.xcconfig"; sourceTree = "<group>"; };
 		AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08E21E7282A41D400FD4EDF /* TFControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFControllerProtocol.swift; sourceTree = "<group>"; };
 		E0AA776128296222002E6068 /* TFCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AA776428296222002E6068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0AA776828296222002E6068 /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				E0AA77982829662A002E6068 /* TFViewModelDelegate.swift */,
+				E08E21E7282A41D400FD4EDF /* TFControllerProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				E0AA77C0282989DB002E6068 /* ContentDetailViewModelDelegate.swift in Sources */,
 				E0AA7793282965AC002E6068 /* TFService.swift in Sources */,
 				E0AA77AD282974F1002E6068 /* Content.swift in Sources */,
+				E08E21E8282A41D400FD4EDF /* TFControllerProtocol.swift in Sources */,
 				E0AA77A128296F21002E6068 /* ServiceConstants.swift in Sources */,
 				E0AA77B3282977E2002E6068 /* ContentCollectionViewCellViewModel.swift in Sources */,
 			);

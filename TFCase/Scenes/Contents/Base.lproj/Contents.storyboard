@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SoF-gW-4eE">
-                                <rect key="frame" x="0.0" y="158" width="414" height="704"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TXG-YI-iG9">
                                     <size key="itemSize" width="128" height="128"/>
@@ -52,9 +52,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SoF-gW-4eE" secondAttribute="trailing" id="DJv-yr-7Kc"/>
                             <constraint firstItem="SoF-gW-4eE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EMr-Mk-Usk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aCi-6M-f4f" secondAttribute="trailing" constant="20" id="No7-o4-uvQ"/>
+                            <constraint firstItem="SoF-gW-4eE" firstAttribute="top" secondItem="aCi-6M-f4f" secondAttribute="bottom" constant="10" id="SbF-dH-aFP"/>
                             <constraint firstItem="aCi-6M-f4f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tp7-a7-T1z"/>
                             <constraint firstItem="aCi-6M-f4f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fua-xo-VsD"/>
-                            <constraint firstItem="SoF-gW-4eE" firstAttribute="top" secondItem="aCi-6M-f4f" secondAttribute="bottom" constant="20" id="oFA-3p-aDl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SoF-gW-4eE" secondAttribute="bottom" id="ucQ-EU-AFd"/>
                         </constraints>
                     </view>

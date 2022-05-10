@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ContentDetailViewModelDelegate: TFViewModelDelegate {
-    
+    func updateView(with content: Content)
 }
