@@ -118,6 +118,12 @@ extension ContentsViewController: ContentsViewModelDelegate {
         self.isPageStillRefreshing = false
     }
     
+    func contentsDidFetchWithError() {
+        let errorLabel = UILabel()
+        errorLabel.text = "Error while fetching contents. Plase try again later."
+        self.contentsCollectionView.backgroundView = errorLabel
+    }
+    
     func navigateToDetail(with data: Content) {
         self.navigate(from: self, to: .contentDetail) { viewController in
             let vc = viewController as! ContentDetailViewController
