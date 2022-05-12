@@ -44,7 +44,7 @@ final class ContentsViewModel: TFViewModel {
                 let viewModels = self?.groupViewModels(with: self?.contents ?? [])
                 self?.delegate?.contentsDidFetchSuccessfully(viewModels ?? [])
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.delegate?.contentsDidFetchWithError()
             }
         })
     }

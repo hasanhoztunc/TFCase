@@ -9,5 +9,6 @@ import Foundation
 
 protocol ContentsViewModelDelegate: TFViewModelDelegate, TFControllerProtocol {
     func contentsDidFetchSuccessfully(_ contents: [[ContentCollectionViewCellViewModel]])
+    func contentsDidFetchWithError()
     func navigateToDetail(with data: Content)
 }
