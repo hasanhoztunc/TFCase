@@ -7,23 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A6C6EB1786DA66B00EEB83 /* Pods_TFCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */; };
+		E08E21E8282A41D400FD4EDF /* TFControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08E21E7282A41D400FD4EDF /* TFControllerProtocol.swift */; };
+		E0A1B282282D5679004A7ABE /* ContentCollectionViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1B281282D5679004A7ABE /* ContentCollectionViewHeaderView.swift */; };
+		E0A1B284282D5838004A7ABE /* ContentCollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0A1B283282D5838004A7ABE /* ContentCollectionViewHeaderView.xib */; };
 		E0AA776528296222002E6068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776428296222002E6068 /* AppDelegate.swift */; };
-		E0AA776728296222002E6068 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776628296222002E6068 /* SceneDelegate.swift */; };
-		E0AA776928296222002E6068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776828296222002E6068 /* ViewController.swift */; };
-		E0AA776C28296222002E6068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AA776A28296222002E6068 /* Main.storyboard */; };
+		E0AA776928296222002E6068 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776828296222002E6068 /* ContentsViewController.swift */; };
+		E0AA776C28296222002E6068 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AA776A28296222002E6068 /* Contents.storyboard */; };
 		E0AA776E28296223002E6068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA776D28296223002E6068 /* Assets.xcassets */; };
 		E0AA777128296223002E6068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AA776F28296223002E6068 /* LaunchScreen.storyboard */; };
+		E0AA778528296413002E6068 /* TFViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA778428296413002E6068 /* TFViewModel.swift */; };
+		E0AA778728296428002E6068 /* TFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA778628296428002E6068 /* TFViewController.swift */; };
+		E0AA778B282964DF002E6068 /* ContentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA778A282964DF002E6068 /* ContentsViewModel.swift */; };
+		E0AA778D2829650D002E6068 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA778C2829650D002E6068 /* AppRouter.swift */; };
+		E0AA778F28296513002E6068 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA778E28296513002E6068 /* AppContainer.swift */; };
+		E0AA7791282965A3002E6068 /* TFServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA7790282965A3002E6068 /* TFServiceRouter.swift */; };
+		E0AA7793282965AC002E6068 /* TFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA7792282965AC002E6068 /* TFService.swift */; };
+		E0AA7796282965E8002E6068 /* ContentsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA7795282965E8002E6068 /* ContentsViewModelDelegate.swift */; };
+		E0AA77992829662A002E6068 /* TFViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77982829662A002E6068 /* TFViewModelDelegate.swift */; };
+		E0AA779C2829667F002E6068 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA779B2829667F002E6068 /* UIViewControllerExtensions.swift */; };
+		E0AA779F28296697002E6068 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA779E28296697002E6068 /* Storyboards.swift */; };
+		E0AA77A128296F21002E6068 /* ServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77A028296F21002E6068 /* ServiceConstants.swift */; };
+		E0AA77A728297270002E6068 /* TFServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77A628297270002E6068 /* TFServiceError.swift */; };
+		E0AA77AD282974F1002E6068 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77AC282974F1002E6068 /* Content.swift */; };
+		E0AA77AF2829772B002E6068 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77AE2829772B002E6068 /* ContentCollectionViewCell.swift */; };
+		E0AA77B12829776D002E6068 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0AA77B02829776D002E6068 /* ContentCollectionViewCell.xib */; };
+		E0AA77B3282977E2002E6068 /* ContentCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B2282977E2002E6068 /* ContentCollectionViewCellViewModel.swift */; };
+		E0AA77B7282979D8002E6068 /* TFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B6282979D8002E6068 /* TFModel.swift */; };
+		E0AA77BA28297C3A002E6068 /* ContentsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77B928297C3A002E6068 /* ContentsConstants.swift */; };
+		E0AA77C0282989DB002E6068 /* ContentDetailViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77BF282989DB002E6068 /* ContentDetailViewModelDelegate.swift */; };
+		E0AA77C2282989F5002E6068 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77C1282989F5002E6068 /* ContentDetailViewModel.swift */; };
+		E0AA77C428298A19002E6068 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA77C328298A19002E6068 /* ContentDetailViewController.swift */; };
+		E0AA77C628298B32002E6068 /* ContentDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AA77C528298B32002E6068 /* ContentDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F0A78FA2A07009A2D4BB384 /* Pods-TFCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFCase.debug.xcconfig"; path = "Target Support Files/Pods-TFCase/Pods-TFCase.debug.xcconfig"; sourceTree = "<group>"; };
+		8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFCase.release.xcconfig"; path = "Target Support Files/Pods-TFCase/Pods-TFCase.release.xcconfig"; sourceTree = "<group>"; };
+		AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08E21E7282A41D400FD4EDF /* TFControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFControllerProtocol.swift; sourceTree = "<group>"; };
+		E0A1B281282D5679004A7ABE /* ContentCollectionViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeaderView.swift; sourceTree = "<group>"; };
+		E0A1B283282D5838004A7ABE /* ContentCollectionViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewHeaderView.xib; sourceTree = "<group>"; };
 		E0AA776128296222002E6068 /* TFCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AA776428296222002E6068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0AA776628296222002E6068 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E0AA776828296222002E6068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E0AA776B28296222002E6068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0AA776828296222002E6068 /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
+		E0AA776B28296222002E6068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contents.storyboard; sourceTree = "<group>"; };
 		E0AA776D28296223002E6068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0AA777028296223002E6068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0AA777228296223002E6068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0AA778428296413002E6068 /* TFViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFViewModel.swift; sourceTree = "<group>"; };
+		E0AA778628296428002E6068 /* TFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFViewController.swift; sourceTree = "<group>"; };
+		E0AA778A282964DF002E6068 /* ContentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewModel.swift; sourceTree = "<group>"; };
+		E0AA778C2829650D002E6068 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		E0AA778E28296513002E6068 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		E0AA7790282965A3002E6068 /* TFServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFServiceRouter.swift; sourceTree = "<group>"; };
+		E0AA7792282965AC002E6068 /* TFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFService.swift; sourceTree = "<group>"; };
+		E0AA7795282965E8002E6068 /* ContentsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewModelDelegate.swift; sourceTree = "<group>"; };
+		E0AA77982829662A002E6068 /* TFViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFViewModelDelegate.swift; sourceTree = "<group>"; };
+		E0AA779B2829667F002E6068 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		E0AA779E28296697002E6068 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		E0AA77A028296F21002E6068 /* ServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConstants.swift; sourceTree = "<group>"; };
+		E0AA77A628297270002E6068 /* TFServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFServiceError.swift; sourceTree = "<group>"; };
+		E0AA77AC282974F1002E6068 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		E0AA77AE2829772B002E6068 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0AA77B02829776D002E6068 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		E0AA77B2282977E2002E6068 /* ContentCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		E0AA77B6282979D8002E6068 /* TFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFModel.swift; sourceTree = "<group>"; };
+		E0AA77B928297C3A002E6068 /* ContentsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsConstants.swift; sourceTree = "<group>"; };
+		E0AA77BF282989DB002E6068 /* ContentDetailViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModelDelegate.swift; sourceTree = "<group>"; };
+		E0AA77C1282989F5002E6068 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
+		E0AA77C328298A19002E6068 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		E0AA77C528298B32002E6068 /* ContentDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +85,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A6C6EB1786DA66B00EEB83 /* Pods_TFCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1EEF1804F78008476CDA26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81504764919D793C932DD9B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F0A78FA2A07009A2D4BB384 /* Pods-TFCase.debug.xcconfig */,
+				8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E0A1B280282D5659004A7ABE /* ContentCollectionViewHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1B281282D5679004A7ABE /* ContentCollectionViewHeaderView.swift */,
+				E0A1B283282D5838004A7ABE /* ContentCollectionViewHeaderView.xib */,
+			);
+			indentWidth = 3;
+			path = ContentCollectionViewHeaderView;
+			sourceTree = "<group>";
+		};
 		E0AA775828296221002E6068 = {
 			isa = PBXGroup;
 			children = (
 				E0AA776328296222002E6068 /* TFCase */,
 				E0AA776228296222002E6068 /* Products */,
+				81504764919D793C932DD9B4 /* Pods */,
+				3F1EEF1804F78008476CDA26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +140,271 @@
 		E0AA776328296222002E6068 /* TFCase */ = {
 			isa = PBXGroup;
 			children = (
-				E0AA776428296222002E6068 /* AppDelegate.swift */,
-				E0AA776628296222002E6068 /* SceneDelegate.swift */,
-				E0AA776828296222002E6068 /* ViewController.swift */,
-				E0AA776A28296222002E6068 /* Main.storyboard */,
-				E0AA776D28296223002E6068 /* Assets.xcassets */,
-				E0AA776F28296223002E6068 /* LaunchScreen.storyboard */,
+				E0AA777828296335002E6068 /* Application */,
+				E0AA777F282963EA002E6068 /* Business */,
+				E0AA777E282963E3002E6068 /* Common */,
+				E0AA7781282963F9002E6068 /* Presentation */,
+				E0AA777B28296365002E6068 /* Scenes */,
 				E0AA777228296223002E6068 /* Info.plist */,
+				E0AA777A2829635C002E6068 /* Resources */,
 			);
 			path = TFCase;
+			sourceTree = "<group>";
+		};
+		E0AA777828296335002E6068 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA777928296339002E6068 /* Delegate */,
+				E0AA778C2829650D002E6068 /* AppRouter.swift */,
+				E0AA778E28296513002E6068 /* AppContainer.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E0AA777928296339002E6068 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA776428296222002E6068 /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		E0AA777A2829635C002E6068 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA776D28296223002E6068 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E0AA777B28296365002E6068 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA777D2829637D002E6068 /* Contents */,
+				E0AA77BB282989B5002E6068 /* ContentDetail */,
+				E0AA777C2829636B002E6068 /* Launch */,
+				E0AA77AA282974DA002E6068 /* Shared */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E0AA777C2829636B002E6068 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA776F28296223002E6068 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		E0AA777D2829637D002E6068 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77B828297C2A002E6068 /* Constants */,
+				E0AA7794282965C7002E6068 /* Protocols */,
+				E0AA7788282964C8002E6068 /* ViewControllers */,
+				E0AA7789282964D3002E6068 /* ViewModels */,
+				E0AA77A8282973ED002E6068 /* Views */,
+				E0AA776A28296222002E6068 /* Contents.storyboard */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		E0AA777E282963E3002E6068 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA779D2829668A002E6068 /* Constants */,
+				E0AA77A528297263002E6068 /* Enumerations */,
+				E0AA779A28296671002E6068 /* Extensions */,
+				E0AA77B5282979C9002E6068 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E0AA777F282963EA002E6068 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA7780282963F1002E6068 /* Service */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		E0AA7780282963F1002E6068 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA7792282965AC002E6068 /* TFService.swift */,
+				E0AA7790282965A3002E6068 /* TFServiceRouter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E0AA7781282963F9002E6068 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77972829661E002E6068 /* Protocol */,
+				E0AA778328296407002E6068 /* ViewControllers */,
+				E0AA778228296400002E6068 /* ViewModels */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E0AA778228296400002E6068 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA778428296413002E6068 /* TFViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E0AA778328296407002E6068 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA778628296428002E6068 /* TFViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E0AA7788282964C8002E6068 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA776828296222002E6068 /* ContentsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E0AA7789282964D3002E6068 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA778A282964DF002E6068 /* ContentsViewModel.swift */,
+				E0AA77B2282977E2002E6068 /* ContentCollectionViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E0AA7794282965C7002E6068 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA7795282965E8002E6068 /* ContentsViewModelDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E0AA77972829661E002E6068 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77982829662A002E6068 /* TFViewModelDelegate.swift */,
+				E08E21E7282A41D400FD4EDF /* TFControllerProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E0AA779A28296671002E6068 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA779B2829667F002E6068 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E0AA779D2829668A002E6068 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA779E28296697002E6068 /* Storyboards.swift */,
+				E0AA77A028296F21002E6068 /* ServiceConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E0AA77A528297263002E6068 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77A628297270002E6068 /* TFServiceError.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		E0AA77A8282973ED002E6068 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1B280282D5659004A7ABE /* ContentCollectionViewHeaderView */,
+				E0AA77A9282973F6002E6068 /* ContentCollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0AA77A9282973F6002E6068 /* ContentCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77AE2829772B002E6068 /* ContentCollectionViewCell.swift */,
+				E0AA77B02829776D002E6068 /* ContentCollectionViewCell.xib */,
+			);
+			path = ContentCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E0AA77AA282974DA002E6068 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77AB282974E5002E6068 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E0AA77AB282974E5002E6068 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77AC282974F1002E6068 /* Content.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0AA77B5282979C9002E6068 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77B6282979D8002E6068 /* TFModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0AA77B828297C2A002E6068 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77B928297C3A002E6068 /* ContentsConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E0AA77BB282989B5002E6068 /* ContentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77BE282989CB002E6068 /* Protocols */,
+				E0AA77BD282989C2002E6068 /* ViewControllers */,
+				E0AA77BC282989BD002E6068 /* ViewModels */,
+				E0AA77C528298B32002E6068 /* ContentDetail.storyboard */,
+			);
+			path = ContentDetail;
+			sourceTree = "<group>";
+		};
+		E0AA77BC282989BD002E6068 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77C1282989F5002E6068 /* ContentDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E0AA77BD282989C2002E6068 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77C328298A19002E6068 /* ContentDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E0AA77BE282989CB002E6068 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA77BF282989DB002E6068 /* ContentDetailViewModelDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +414,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0AA777528296223002E6068 /* Build configuration list for PBXNativeTarget "TFCase" */;
 			buildPhases = (
+				D4C7F2D0DB4BC8ACBA34535D /* [CP] Check Pods Manifest.lock */,
 				E0AA775D28296221002E6068 /* Sources */,
 				E0AA775E28296221002E6068 /* Frameworks */,
 				E0AA775F28296221002E6068 /* Resources */,
+				D8C2FAB44E90E8F1BAD9B715 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,34 +467,101 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AA77B12829776D002E6068 /* ContentCollectionViewCell.xib in Resources */,
+				E0AA77C628298B32002E6068 /* ContentDetail.storyboard in Resources */,
 				E0AA777128296223002E6068 /* LaunchScreen.storyboard in Resources */,
 				E0AA776E28296223002E6068 /* Assets.xcassets in Resources */,
-				E0AA776C28296222002E6068 /* Main.storyboard in Resources */,
+				E0A1B284282D5838004A7ABE /* ContentCollectionViewHeaderView.xib in Resources */,
+				E0AA776C28296222002E6068 /* Contents.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4C7F2D0DB4BC8ACBA34535D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TFCase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C2FAB44E90E8F1BAD9B715 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TFCase/Pods-TFCase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TFCase/Pods-TFCase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TFCase/Pods-TFCase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0AA775D28296221002E6068 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0AA776928296222002E6068 /* ViewController.swift in Sources */,
+				E0AA776928296222002E6068 /* ContentsViewController.swift in Sources */,
+				E0AA77BA28297C3A002E6068 /* ContentsConstants.swift in Sources */,
+				E0AA77AF2829772B002E6068 /* ContentCollectionViewCell.swift in Sources */,
 				E0AA776528296222002E6068 /* AppDelegate.swift in Sources */,
-				E0AA776728296222002E6068 /* SceneDelegate.swift in Sources */,
+				E0AA778D2829650D002E6068 /* AppRouter.swift in Sources */,
+				E0AA77B7282979D8002E6068 /* TFModel.swift in Sources */,
+				E0AA778B282964DF002E6068 /* ContentsViewModel.swift in Sources */,
+				E0AA77A728297270002E6068 /* TFServiceError.swift in Sources */,
+				E0AA779C2829667F002E6068 /* UIViewControllerExtensions.swift in Sources */,
+				E0AA7791282965A3002E6068 /* TFServiceRouter.swift in Sources */,
+				E0AA7796282965E8002E6068 /* ContentsViewModelDelegate.swift in Sources */,
+				E0AA77C428298A19002E6068 /* ContentDetailViewController.swift in Sources */,
+				E0AA778728296428002E6068 /* TFViewController.swift in Sources */,
+				E0AA778528296413002E6068 /* TFViewModel.swift in Sources */,
+				E0AA77C2282989F5002E6068 /* ContentDetailViewModel.swift in Sources */,
+				E0A1B282282D5679004A7ABE /* ContentCollectionViewHeaderView.swift in Sources */,
+				E0AA779F28296697002E6068 /* Storyboards.swift in Sources */,
+				E0AA77992829662A002E6068 /* TFViewModelDelegate.swift in Sources */,
+				E0AA778F28296513002E6068 /* AppContainer.swift in Sources */,
+				E0AA77C0282989DB002E6068 /* ContentDetailViewModelDelegate.swift in Sources */,
+				E0AA7793282965AC002E6068 /* TFService.swift in Sources */,
+				E0AA77AD282974F1002E6068 /* Content.swift in Sources */,
+				E08E21E8282A41D400FD4EDF /* TFControllerProtocol.swift in Sources */,
+				E0AA77A128296F21002E6068 /* ServiceConstants.swift in Sources */,
+				E0AA77B3282977E2002E6068 /* ContentCollectionViewCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E0AA776A28296222002E6068 /* Main.storyboard */ = {
+		E0AA776A28296222002E6068 /* Contents.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E0AA776B28296222002E6068 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Contents.storyboard;
 			sourceTree = "<group>";
 		};
 		E0AA776F28296223002E6068 /* LaunchScreen.storyboard */ = {
@@ -284,6 +693,7 @@
 		};
 		E0AA777628296223002E6068 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0A78FA2A07009A2D4BB384 /* Pods-TFCase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,7 +704,6 @@
 				INFOPLIST_FILE = TFCase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +721,7 @@
 		};
 		E0AA777728296223002E6068 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,7 +732,6 @@
 				INFOPLIST_FILE = TFCase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
