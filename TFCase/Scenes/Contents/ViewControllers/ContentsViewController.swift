@@ -16,7 +16,7 @@ final class ContentsViewController: TFViewController<ContentsViewModel> {
     
     // MARK: - Privates
     
-    private var contents: [ContentCollectionViewCellViewModel] = []
+    private var contents: [[ContentCollectionViewCellViewModel]] = []
     private var isPageStillRefreshing: Bool = false
     
     // MARK: - Lifecycle
@@ -28,9 +28,13 @@ final class ContentsViewController: TFViewController<ContentsViewModel> {
     }
     
     override func prepareUI() {
+        self.title = "Contents"
+        
         self.contentsCollectionView.register(UINib(nibName: ContentsConstants.cellIdentifier, bundle: nil),
                                              forCellWithReuseIdentifier: ContentsConstants.cellIdentifier)
-        
+        self.contentsCollectionView.register(UINib(nibName: ContentsConstants.headerIdentifier, bundle: nil),
+                                             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                             withReuseIdentifier: ContentsConstants.headerIdentifier)
         self.contentsCollectionView.dataSource = self
         self.contentsCollectionView.delegate = self
         
@@ -57,21 +61,41 @@ final class ContentsViewController: TFViewController<ContentsViewModel> {
 
 // MARK: - CollectionViewDataSource
 
-extension ContentsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ContentsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return self.contents.count
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.contents.count
+        return self.contents[section].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentsConstants.cellIdentifier, for: indexPath) as! ContentCollectionViewCell
-        cell.configureCell(with: self.contents[indexPath.row])
+        cell.configureCell(with: self.contents[indexPath.section][indexPath.row])
         
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                         withReuseIdentifier: ContentsConstants.headerIdentifier,
+                                                                         for: indexPath) as! ContentCollectionViewHeaderView
+            header.configureView(with: self.contents[indexPath.section].first?.wrapperType ?? "")
+            
+            return header
+        }
+        return UICollectionReusableView()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: self.view.frame.size.width, height: 60)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.viewModel.contentDidSelect(with: indexPath.row)
+        self.viewModel.contentDidSelect(with: indexPath)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -88,7 +112,7 @@ extension ContentsViewController: UICollectionViewDataSource, UICollectionViewDe
 
 extension ContentsViewController: ContentsViewModelDelegate {
     
-    func contentsDidFetchSuccessfully(_ contents: [ContentCollectionViewCellViewModel]) {
+    func contentsDidFetchSuccessfully(_ contents: [[ContentCollectionViewCellViewModel]]) {
         self.contents = contents
         self.contentsCollectionView.reloadData()
         self.isPageStillRefreshing = false

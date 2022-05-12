@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		18A6C6EB1786DA66B00EEB83 /* Pods_TFCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */; };
 		E08E21E8282A41D400FD4EDF /* TFControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08E21E7282A41D400FD4EDF /* TFControllerProtocol.swift */; };
+		E0A1B282282D5679004A7ABE /* ContentCollectionViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1B281282D5679004A7ABE /* ContentCollectionViewHeaderView.swift */; };
+		E0A1B284282D5838004A7ABE /* ContentCollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0A1B283282D5838004A7ABE /* ContentCollectionViewHeaderView.xib */; };
 		E0AA776528296222002E6068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776428296222002E6068 /* AppDelegate.swift */; };
 		E0AA776928296222002E6068 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA776828296222002E6068 /* ContentsViewController.swift */; };
 		E0AA776C28296222002E6068 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AA776A28296222002E6068 /* Contents.storyboard */; };
@@ -44,6 +46,8 @@
 		8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFCase.release.xcconfig"; path = "Target Support Files/Pods-TFCase/Pods-TFCase.release.xcconfig"; sourceTree = "<group>"; };
 		AD4649E2A09B44A406CD41F4 /* Pods_TFCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08E21E7282A41D400FD4EDF /* TFControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFControllerProtocol.swift; sourceTree = "<group>"; };
+		E0A1B281282D5679004A7ABE /* ContentCollectionViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeaderView.swift; sourceTree = "<group>"; };
+		E0A1B283282D5838004A7ABE /* ContentCollectionViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewHeaderView.xib; sourceTree = "<group>"; };
 		E0AA776128296222002E6068 /* TFCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AA776428296222002E6068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0AA776828296222002E6068 /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,16 @@
 				8F5EAB56A5F117017B3F91A3 /* Pods-TFCase.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E0A1B280282D5659004A7ABE /* ContentCollectionViewHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1B281282D5679004A7ABE /* ContentCollectionViewHeaderView.swift */,
+				E0A1B283282D5838004A7ABE /* ContentCollectionViewHeaderView.xib */,
+			);
+			indentWidth = 3;
+			path = ContentCollectionViewHeaderView;
 			sourceTree = "<group>";
 		};
 		E0AA775828296221002E6068 = {
@@ -311,6 +325,7 @@
 		E0AA77A8282973ED002E6068 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E0A1B280282D5659004A7ABE /* ContentCollectionViewHeaderView */,
 				E0AA77A9282973F6002E6068 /* ContentCollectionViewCell */,
 			);
 			path = Views;
@@ -456,6 +471,7 @@
 				E0AA77C628298B32002E6068 /* ContentDetail.storyboard in Resources */,
 				E0AA777128296223002E6068 /* LaunchScreen.storyboard in Resources */,
 				E0AA776E28296223002E6068 /* Assets.xcassets in Resources */,
+				E0A1B284282D5838004A7ABE /* ContentCollectionViewHeaderView.xib in Resources */,
 				E0AA776C28296222002E6068 /* Contents.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +540,7 @@
 				E0AA778728296428002E6068 /* TFViewController.swift in Sources */,
 				E0AA778528296413002E6068 /* TFViewModel.swift in Sources */,
 				E0AA77C2282989F5002E6068 /* ContentDetailViewModel.swift in Sources */,
+				E0A1B282282D5679004A7ABE /* ContentCollectionViewHeaderView.swift in Sources */,
 				E0AA779F28296697002E6068 /* Storyboards.swift in Sources */,
 				E0AA77992829662A002E6068 /* TFViewModelDelegate.swift in Sources */,
 				E0AA778F28296513002E6068 /* AppContainer.swift in Sources */,

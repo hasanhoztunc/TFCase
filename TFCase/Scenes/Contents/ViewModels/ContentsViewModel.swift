@@ -11,7 +11,7 @@ final class ContentsViewModel: TFViewModel {
     
     weak var delegate: ContentsViewModelDelegate?
     
-    private var contents: [Content] = []
+    private var contents: [[Content]] = []
     private var page = 0
     private var searchText: String?
     
@@ -25,8 +25,8 @@ final class ContentsViewModel: TFViewModel {
         self.search(text: self.searchText)
     }
     
-    func contentDidSelect(with index: Int) {
-        let selectedContent = self.contents[index]
+    func contentDidSelect(with indexPath: IndexPath) {
+        let selectedContent = self.contents[indexPath.section][indexPath.row]
         self.delegate?.navigateToDetail(with: selectedContent)
     }
     
@@ -39,9 +39,9 @@ final class ContentsViewModel: TFViewModel {
             switch response {
             case .success(let contents):
                 self?.searchText = text
-                self?.contents.append(contentsOf: contents)
-                let viewModels = self?.contents.map({ ContentCollectionViewCellViewModel(contentName: $0.collectionName,
-                                                                                  contentImage: $0.smallImage) })
+                let groupedContents = self?.groupContents(with: contents) ?? []
+                self?.contents.append(contentsOf: groupedContents)
+                let viewModels = self?.groupViewModels(with: self?.contents ?? [])
                 self?.delegate?.contentsDidFetchSuccessfully(viewModels ?? [])
             case .failure(let error):
                 print(error.localizedDescription)
@@ -56,10 +56,10 @@ final class ContentsViewModel: TFViewModel {
         })
         
         var groupedItems: [[Content]] = []
-        for content in contents {
+        for content in wrappers {
             var filteredContents: [Content] = []
-            for secondContent in contents {
-                if content.wrapperType == secondContent.wrapperType {
+            for secondContent in models {
+                if content == secondContent.wrapperType {
                     filteredContents.append(secondContent)
                 }
             }
@@ -73,7 +73,7 @@ final class ContentsViewModel: TFViewModel {
         for model in groupedModels {
             var filteredContents: [ContentCollectionViewCellViewModel] = []
             for item in model {
-                filteredContents.append(ContentCollectionViewCellViewModel(contentName: item.collectionName, contentImage: item.smallImage))
+                filteredContents.append(ContentCollectionViewCellViewModel(wrapperType: item.wrapperType, contentName: item.collectionName, contentImage: item.smallImage))
             }
             groupedItems.append(filteredContents)
         }

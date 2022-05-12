@@ -8,6 +8,7 @@
 import Foundation
 
 struct ContentCollectionViewCellViewModel {
+    let wrapperType: String
     let contentName: String
     let contentImage: String
 }

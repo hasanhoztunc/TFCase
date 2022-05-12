@@ -9,4 +9,5 @@ import Foundation
 
 enum ContentsConstants {
     static let cellIdentifier = "ContentCollectionViewCell"
+    static let headerIdentifier = "ContentCollectionViewHeaderView"
 }
