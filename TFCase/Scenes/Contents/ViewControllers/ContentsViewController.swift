@@ -14,7 +14,7 @@ final class ContentsViewController: TFViewController<ContentsViewModel> {
     @IBOutlet private weak var searchTextField: UITextField!
     @IBOutlet private weak var contentsCollectionView: UICollectionView!
     
-    // MARK: - Privates
+    // MARK: - Private
     
     private var contents: [[ContentCollectionViewCellViewModel]] = []
     private var isPageStillRefreshing: Bool = false
